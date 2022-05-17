@@ -1,0 +1,63 @@
+*{
+    font-family: verdana;
+    background-color:bisque;
+    margin: 0.5rem;
+}
+
+nav{
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav h1{
+    background-color: aquamarine;
+}
+
+nav h1 a{
+    background-color: aquamarine;
+    color: black;
+    text-decoration: none;
+}
+
+nav div{
+    background-color: aquamarine;
+}
+div#nav-items ul{
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+}
+
+div#nav-items li{
+    list-style-type: none;
+    background-color: aquamarine;
+}
+
+
+div#nav-items a{
+    text-decoration: none;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+}
+
+body h1{
+    padding: 1rem;
+    text-align: center;
+}
+
+a#know-player{
+    text-decoration: none;
+}
+
+#player-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#player-info img{
+    max-width: 10%;
+}
