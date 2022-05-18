@@ -16,7 +16,7 @@ const playerDetails = (player) => {
                     </div>
                 </nav>
                 <div id='player-info'>
-                    <img id='player-img' src='/images/${player.image}' alt='${player.firstName} ${player.lastName}'/>
+                    <img id='player-img' src='/images/${player.image ? player.image : 'no-found.png'}  ' alt='${player.firstName} ${player.lastName}'/>
                     <p>Full Name: ${player.firstName} ${player.lastName}</p>
                     <p>Nickname: ${player.nickName}</p>
                     <p>Date of Birth: ${player.dob}</p>

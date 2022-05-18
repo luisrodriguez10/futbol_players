@@ -1,13 +1,12 @@
 const express = require("express");
 const morgan = require("morgan");
-const playersList = require("./views/playersList");
-const playerDetails = require('./views/playerDetails')
 const { client, seeder } = require("./db");
 
 const app = express();
 
 app.use(morgan("dev"));
 app.use(express.static("assets"));
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", async (req, res, next) => {
   try {
@@ -36,7 +35,7 @@ app.get("/", async (req, res, next) => {
   }
 });
 
-app.use('/players', require('./routes/players'))
+app.use("/players", require("./routes/players"));
 
 const init = async () => {
   try {
