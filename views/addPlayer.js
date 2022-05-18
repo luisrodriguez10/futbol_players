@@ -31,8 +31,6 @@ const addPlayer = () => {
                         <input type='text' name='currentTeam'/>
                         <label for='countryCurrentTeam'>Country Current Team</label>
                         <input type='text' name='countryCurrentTeam'/>
-                        <label for='image'>Select an image</label>
-                        <input type='file' name='image'/>
                         <button>Add Player</button>
                     </form>
                 </div>

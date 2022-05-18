@@ -14,10 +14,9 @@ app.post('/', async(req, res, next) => {
         const dob = req.body.dob;
         const nationality = req.body.nationality;
         const currentTeam = `${req.body.currentTeam} - ${req.body.countryCurrentTeam}` ;
-        const image = req.body.image;
 
         const SQL = 'INSERT INTO players("firstName", "lastName", "nickName", dob, nationality, "currentTeam", image) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *'
-        const player = await client.query(SQL, [firstName, lastName, nickName, dob, nationality, currentTeam, image])
+        const player = await client.query(SQL, [firstName, lastName, nickName, dob, nationality, currentTeam, null])
         res.redirect(`/players/${player.rows[0].id}`)
     } catch (error) {
         next(error)
